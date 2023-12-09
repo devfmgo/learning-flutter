@@ -18,27 +18,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Conditional IF
-    String grade = "B";
-
-    if (grade == "A") {
-      print("Excelent!");
-    } else if (grade == "B") {
-      print("Good!");
-    } else if (grade == "C") {
-      print("Fair!");
-    } else if (grade == "D") {
-      print("Needs Imporivement!");
-    } else {
-      print("Invalid Grade");
-    }
-
-    if (age < 13) {
-      print("You can only watch G rated movies");
-    } else if (age < 18) {
-      print("You Can watch G and PG13 rates movie");
-    } else {
-      print("You Can watch G, PG13 dan R13");
+    // For Loop
+    for (var i = 0; i <= 5; i++) {
+      print(i);
     }
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
