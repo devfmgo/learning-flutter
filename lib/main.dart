@@ -15,21 +15,28 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           backgroundColor: Colors.deepPurple[200],
+          appBar: AppBar(
+            title: Text("My App Bar"),
+            backgroundColor: Colors.deepPurple,
+            elevation: 0,
+            leading: Icon(Icons.menu),
+            actions: [
+              IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
+            ],
+          ),
           body: Center(
               child: Container(
             height: 300,
             width: 300,
             decoration: BoxDecoration(
-                color: Colors.deepPurple[300],
+                color: Colors.deepPurple[500],
                 borderRadius: BorderRadius.circular(20)),
             padding: EdgeInsets.all(25),
-            //Sample Widget Text
-            child: Text(
-              "Muhamad Fikri",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+            //Sample Widget Icon
+            child: Icon(
+              Icons.favorite,
+              color: Colors.grey[300],
+              size: 64,
             ),
           ))),
     );
