@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -5,66 +7,31 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  // Basic Dart
-  //VARIABEL
-  String name = "Muhamad Fikri";
-  int age = 29;
-  double pi = 3.14159;
-  bool isBeginner = true;
-
-  // Basic Function
-  void greet() {
-    print("Hello fik");
-  }
-
-  // function with paramters
-  void greetPerson(String name) {
-    print("Hello, " + name);
-  }
-
-  // function with return type
-  int add(int a, int b) {
-    int sum = a + b;
-    return sum;
-  }
-
-  // DATA STRUCTURE
-  // LIST
-  List<int> numbers = [1, 2, 3, 5];
-  List<String> names = ["Fikri", "Gita"];
-  void printNumbers() {
-    for (int i = 0; i < numbers.length; i++) {
-      print(numbers[i]);
-    }
-  }
-
-  void printName() {
-    for (int i = 0; i < names.length; i++) {
-      print(names[i]);
-    }
-  }
-
-  // SET : Underordered collection of unique elements
-  Set<String> uniqueNames = {"Fikri", "Gita"};
-
-  // MAP : store as key-value pairs
-  Map user = {'name': 'fikri', 'age': 29};
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    /*
-      int mySum = add(3, 5);
-      print(mySum);
-      greetPerson("Fikri");
-      printNumbers();
-      printName();
-    */
-    print(user['name']);
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: Scaffold(
+          backgroundColor: Colors.deepPurple[200],
+          body: Center(
+              child: Container(
+            height: 300,
+            width: 300,
+            decoration: BoxDecoration(
+                color: Colors.deepPurple[300],
+                borderRadius: BorderRadius.circular(20)),
+            padding: EdgeInsets.all(25),
+            //Sample Widget Text
+            child: Text(
+              "Muhamad Fikri",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+          ))),
     );
   }
 }
