@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
@@ -8,6 +10,11 @@ class SecondPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("2nd Page"),
+      ),
+      body: Container(
+        child: Center(
+          child: Text("Page 2"),
+        ),
       ),
     );
   }

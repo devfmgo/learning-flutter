@@ -6,17 +6,18 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("First Page"),
+      appBar: AppBar(
+        title: const Text("First Page"),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text("Go To Second Page"),
+          onPressed: () {
+            // Navigator to Second Page
+            Navigator.pushNamed(context, '/secondpage');
+          },
         ),
-        body: Center(
-          child: ElevatedButton(
-            child: Text("Go To Second Page"),
-            onPressed: () {
-              // Navigator to Second Page
-              Navigator.pushNamed(context, '/secondpage');
-            },
-          ),
-        ));
+      ),
+    );
   }
 }
