@@ -14,20 +14,26 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Column(
+        // Sampel List View
+        body: ListView(
+          scrollDirection: Axis.horizontal,
           children: [
             //1st box
-            Expanded(
-              child: Container(color: Colors.deepPurple),
+            Container(
+              width: 350,
+              color: Colors.deepPurple,
             ),
+
             //2nd box
-            Expanded(
-              flex: 3,
-              child: Container(color: Colors.deepPurple[400]),
+            Container(
+              width: 350,
+              color: Colors.deepPurple[200],
             ),
+
             //3rd box
-            Expanded(
-              child: Container(color: Colors.deepPurple[300]),
+            Container(
+              width: 350,
+              color: Colors.deepPurple[300],
             ),
           ],
         ),
