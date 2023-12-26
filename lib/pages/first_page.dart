@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:am_flutter/pages/home_page.dart';
-import 'package:am_flutter/pages/progile_page.dart';
+import 'package:am_flutter/pages/profile_page.dart';
 import 'package:am_flutter/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
