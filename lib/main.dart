@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:am_flutter/pages/first_page.dart';
-import 'package:am_flutter/pages/second_page.dart';
+import 'package:am_flutter/pages/home_page.dart';
+import 'package:am_flutter/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: FirstPage(),
-      routes: {'/secondpage': (context) => SecondPage()},
+      routes: {
+        '/firstpage': (context) => FirstPage(),
+        '/homepage': (context) => HomePage(),
+        '/settings': (context) => SettingsPage()
+      },
     );
   }
 }

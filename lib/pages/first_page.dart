@@ -9,7 +9,7 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("First Page"),
+        title: const Text("First Pages"),
       ),
       drawer: Drawer(
         backgroundColor: Colors.deepOrange[50],
@@ -25,12 +25,22 @@ class FirstPage extends StatelessWidget {
             // home page list title
             ListTile(
               leading: Icon(Icons.home),
-              title: Text("Home"),
+              title: Text("H O M E"),
+              onTap: () {
+                //pop drawer first
+                Navigator.pop(context);
+                //got to home page
+                Navigator.pushNamed(context, '/homepage');
+              },
             ),
             // setting page list title
             ListTile(
               leading: Icon(Icons.settings),
-              title: Text("Settings"),
+              title: Text("S E T T I N G S"),
+              onTap: () {
+                // go to setting
+                Navigator.pushNamed(context, '/settings');
+              },
             ),
           ],
         ),
